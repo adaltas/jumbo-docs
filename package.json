@@ -1,0 +1,42 @@
+{
+  "name": "nikita-docs",
+  "description": "Nikita Official Documentation",
+  "version": "0.0.0",
+  "author": "David Worms <david@adaltas.com>",
+  "dependencies": {
+    "@material-ui/core": "^1.2.0",
+    "@material-ui/docs": "^1.0.0-alpha.3",
+    "@material-ui/icons": "^1.1.0",
+    "gatsby": "^1.9.270",
+    "gatsby-link": "^1.6.44",
+    "gatsby-plugin-react-helmet": "^2.0.11",
+    "gatsby-plugin-react-next": "^1.0.11",
+    "gatsby-remark-prismjs": "^2.0.3",
+    "gatsby-source-filesystem": "^1.5.38",
+    "gatsby-transformer-remark": "^1.7.41",
+    "prism-themes": "^1.0.1",
+    "react-helmet": "^5.2.0",
+    "react-markdown": "^3.3.3",
+    "react-particles-js": "^2.2.0",
+    "rehype-react": "^3.0.2",
+    "typeface-roboto": "0.0.54"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adaltas/node-nikita-docs"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "main": "n/a",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "prettier": "^1.13.4"
+  }
+}
