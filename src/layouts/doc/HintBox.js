@@ -67,14 +67,14 @@ class HintBox extends Component {
 
   render() {
     return (
-      <p style={{ ...hintBoxStyle.box, ...this.type }}>
+      <div style={{ ...hintBoxStyle.box, ...this.type }}>
         <span style={hintBoxStyle.icon}>
           {this.iconComponent}
         </span>
         <span style={hintBoxStyle.content}>
           <ReactMarkdown source={this.text} className={this.props.type} />
         </span>
-      </p>
+      </div>
     );
   }
 }

@@ -2,36 +2,36 @@ module.exports = {
   siteMetadata: {
     title: 'Jumbo',
     github: {
-      url: 'https://github.com/adaltas/node-nikita',
-      title: 'Nikita GitHub Repository'
+      url: 'https://github.com/adaltas/jumbo',
+      title: 'Jumbo GitHub Repository'
     },
     footer: [{
       title: 'Navigate',
       links: [{
+        label: 'Overview',
+        url: '/overview/',
+      }, {
         label: 'Getting started',
-        url: '/about/',
+        url: '/getting-started/',
       }, {
-        label: 'Usages',
-        url: '/usages/',
-      }, {
-        label: 'Options',
-        url: '/options/',
+        label: 'Jumbo CLI',
+        url: '/commands/',
       }]
     }, {
       title: 'Contribute',
       links: [{
         label: 'GitHub',
-        url: 'https://github.com/adaltas/node-nikita',
+        url: 'https://github.com/adaltas/jumbo',
       }, {
         label: 'Issue Tracker',
-        url: 'https://github.com/adaltas/node-nikita/issues',
+        url: 'https://github.com/adaltas/jumbo/issues',
       }, {
         label: 'License',
-        url: '/about/license',
+        url: 'https://github.com/adaltas/jumbo/blob/master/LICENSE',
       }]
     }, {
       title: 'About',
-      content: 'Nikita is an open source product hosted on <a href="https://www.github.com">GitHub</a> and developed by <a href="http://www.adaltas.com">Adaltas</a>.'
+      content: 'Jumbo is an open source product hosted on <a href="https://www.github.com">GitHub</a> and developed by <a href="http://www.adaltas.com">Adaltas</a>.'
     }]
   },
   plugins: [

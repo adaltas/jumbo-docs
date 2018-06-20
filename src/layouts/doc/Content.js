@@ -60,7 +60,7 @@ const styles = theme => ({
       textAlign: 'justify',
     },
     '& :not(pre) > code[class*="language-"]': {
-      padding: '.2em .3em 0 .3em',
+      padding: '.1em .3em .1em .3em',
       background: '#7ec69950',
       color: '#18793c',
       fontSize: '.9em'
@@ -74,6 +74,21 @@ const styles = theme => ({
       paddingLeft: '0.75em',
       borderLeft: '0.25em solid #7ec699'
     },
+    '& table': {
+      width: '95%',
+      margin: 'auto'
+    },
+    '& table, & th, & td': {
+      borderCollapse: 'collapse',
+    },
+    '& th, & td': {
+      padding: '10px',
+      textAlign: 'left',
+      border: '1px solid #ddd',
+    },
+    '& tr:nth-child(even)': {
+      backgroundColor: '#f5f5f5'
+    }
   }),
   [theme.breakpoints.up(900 + theme.spacing.unit * 6)]: {
     content: {

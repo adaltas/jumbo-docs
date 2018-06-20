@@ -1,6 +1,6 @@
 ---
 title: Cluster configuration
-sort: 6
+sort: 5
 ---
 
 # Cluster configuration
@@ -100,12 +100,12 @@ When installing a service, all its components are auto-installed on the best fit
 
 Note that the service's clients will always be installed on all hosts (even with `--no-auto`) and on nodes created after the service installation. However you can use `rmcomponent` to delete them individually afterward.
 
-A list of all the services supported by Jumbo is available [here](#supported-services-and-components).
+A list of all the services supported by Jumbo is available [here](../../about/supported).
 
 <hint-box
     type='info'
     text='**High Availability support**  
-    Some services support High Availability ([list](../supported/)).  
+    Some services support High Availability.  
     To install a service in HA, use the tag `--ha` with the command `addservice`.'
     ></hint-box>
 
@@ -113,7 +113,7 @@ A list of all the services supported by Jumbo is available [here](#supported-ser
 
 If you choose to not auto-install the components with the flag `--no-auto`, you have to manually add components with `addcomponent` on the machines of your choice. Use the command `checkservice` to see what components are missing for the service to be complete:
 
-```yaml{1,4}
+```markdown{1,4}
 jumbo (mycluster) > checkservice HDFS
 The service "HDFS" misses:
  - 1 DATANODE
