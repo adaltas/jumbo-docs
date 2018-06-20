@@ -12,6 +12,7 @@ const styles = theme => ({
     paddingTop: 40,
     flex: '1 1 100%',
     maxWidth: '100%',
+    minHeight: '686px',
     margin: '0 auto 3rem',
     '& a': {
       textDecoration: 'none',

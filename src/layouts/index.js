@@ -151,7 +151,7 @@ class Layout extends React.Component {
               <img src={jum} className={classes.jumboImg} />
               <p>{'A local Hadoop cluster bootstrapper for developers'}</p>
               <p>{'Deploy virtualized clusters in minutes with Jumbo CLI'}</p>
-              <Link to="/" className={classes.buttonLink}>
+              <Link to="/getting-started/" className={classes.buttonLink}>
                 <Button
                   size="large"
                   variant="outlined"
@@ -161,7 +161,7 @@ class Layout extends React.Component {
                   {'Get started'}
                 </Button>
               </Link>
-              <Link to="/" className={classes.buttonLink}>
+              <Link to="/overview/versions" className={classes.buttonLink}>
                 <Button
                   size="large"
                   variant="outlined"

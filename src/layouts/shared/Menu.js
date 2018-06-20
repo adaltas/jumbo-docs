@@ -59,28 +59,23 @@ class Menu extends React.Component {
   render() {
     const { classes, menu } = this.props
     const pages = Object.values(menu.children)
-    .sort( (p1, p2) => p1.data.sort > p2.data.sort )
-    .map( page => (
-      <MenuItem
-        component={Link}
-        key={page.data.slug}
-        to={page.data.slug}
-        activeClassName={classes.active}
-        className={classNames(classes.link, classes.leaf)}
-      >
-        {page.data.title}
-      </MenuItem>
-    ))
+      .sort((p1, p2) => p1.data.sort > p2.data.sort)
+      .map(page => (
+        <MenuItem
+          component={Link}
+          key={page.data.slug}
+          to={page.data.slug}
+          activeClassName={classes.active}
+          className={classNames(classes.link, classes.leaf)}
+        >
+          {page.data.title}
+        </MenuItem>
+      ))
     return (
       <div>
         <MenuList component="nav">
           <MenuItem component={Link} to={menu.data.slug}>
             <ListItemText primary={menu.data.title} onClick={this.navigate} />
-            <ListItemSecondaryAction>
-              <IconButton onClick={this.handleClick}>
-                {this.state.open ? <ExpandLess/> : <ExpandMore/>}
-              </IconButton>
-            </ListItemSecondaryAction>
           </MenuItem>
           <Collapse in={this.state.open} timeout="auto" unmountOnExit>
             <MenuList component="ul" disablePadding>
