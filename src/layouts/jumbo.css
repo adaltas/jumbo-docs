@@ -1,15 +1,3 @@
-.jumbo-big{
-    text-align: center;
-    height: 500px;
-    padding-top: 150px;
-    background-image: linear-gradient(#2B2D42a8, #2B2D42);
-    color: #f0f7f4
-}
-
-.jumbo-img {
-    height: 111px;
-}
-
 .info > p, .warning > p, .tip > p{
     margin: 0
 }

@@ -28,19 +28,35 @@ const styles = theme => ({
   },
   content: {
     width: '100%',
+    fontFamily: 'roboto',
+    fontSize: '20px',
   },
   button: {
     margin: theme.spacing.unit,
   },
   outlined: {
-    borderColor: '#fff',
-    color: '#fff',
+    borderColor: '#7ec699',
+    color: '#7ec699',
     // backgroundColor: 'rgba(0, 0, 0, 0.2)',
     backgroundColor: 'rgba(255, 255, 255, 0.08)',
     '&:hover': {
       backgroundColor: 'rgba(255, 255, 255, 0.2)',
     },
   },
+  buttonLink: {
+    color: '#ffffff00'
+  },
+  jumboBig: {
+    textAlign: 'center',
+    height: '500px',
+    paddingTop: '150px',
+    backgroundImage: 'linear-gradient(#2B2D42b8, #2B2D42)',
+    color: '#f0f7f4',
+  },
+  jumboImg: {
+    maxHeight: '111px',
+    maxWidth: '80%'
+  }
 })
 
 class Layout extends React.Component {
@@ -130,12 +146,12 @@ class Layout extends React.Component {
           </Drawer>
         </Hidden>
         <div ref="content" className={classes.content}>
-          <div className='jumbo-big'>
+          <div className={classes.jumboBig} >
             <span className={classes.content}>
-              <img src={jum} className='jumbo-img' />
-              <p>{'A local Hadoop cluster bootstrapper'}</p>
-              <p>{'Deploy virtualized clusters in minutes'}</p>
-              <Link to="/">
+              <img src={jum} className={classes.jumboImg} />
+              <p>{'A local Hadoop cluster bootstrapper for developers'}</p>
+              <p>{'Deploy virtualized clusters in minutes with Jumbo CLI'}</p>
+              <Link to="/" className={classes.buttonLink}>
                 <Button
                   size="large"
                   variant="outlined"
@@ -145,14 +161,14 @@ class Layout extends React.Component {
                   {'Get started'}
                 </Button>
               </Link>
-              <Link to="/">
+              <Link to="/" className={classes.buttonLink}>
                 <Button
                   size="large"
                   variant="outlined"
                   className={classes.button}
                   classes={{ outlined: classes.outlined }}
                 >
-                  {'New in 0.x.x'}
+                  {'New in 0.4.1'}
                 </Button>
               </Link>
             </span>

@@ -54,7 +54,6 @@ const styles = theme => ({
     },
     '& p': {
       color: '#2D2D2D',
-      textAlign: 'justify',
     },
     '& li': {
       color: '#2D2D2D',
@@ -74,7 +73,7 @@ const styles = theme => ({
       paddingRight: '1em',
       paddingLeft: '0.75em',
       borderLeft: '0.25em solid #7ec699'
-    }
+    },
   }),
   [theme.breakpoints.up(900 + theme.spacing.unit * 6)]: {
     content: {

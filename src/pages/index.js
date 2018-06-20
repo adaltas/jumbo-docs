@@ -2,19 +2,18 @@ import React from 'react'
 
 import { withStyles } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
-import Layout from '../layouts/index'
+import schema from './../layouts/home/jumbo.svg'
 
 const styles = theme => ({
   root: {
     flexGrow: 1,
   },
-  paper: {
-    //   height: 140,
-    //   width: 100,
+  gridItemOdd: {
+    textAlign: 'right'
   },
-  // control: {
-  //   padding: theme.spacing.unit * 2,
-  // },
+  gridImg: {
+    maxWidth: '100%'
+  }
 })
 
 class IndexPage extends React.Component {
@@ -23,69 +22,38 @@ class IndexPage extends React.Component {
     return (
       <div>
         <Grid container className={classes.root} spacing={24}>
-          <Grid item xs={12} sm={6}>
-            <h3>{'Consistent Usage'}</h3>
-            <p>
-              {
-                'All the functions share the same API, accepting options and a user callback in a flexible manner. Once you learn the core usage, you only learn the options of the function you wish to execute.'
-              }
-            </p>
+          <Grid item container spacing={32} xs={12} sm={12} className={classes.gridItemOdd} >
+            <Grid item xs={12} sm={6} >
+              <h3>{'CONFIGURE YOUR DEVELOPMENT ENVIRONMENT'}</h3>
+              <p>
+                {
+                  'Configure your clusters in minutes with the friendly Jumbo CLI and start developing! All the boring stuff is abstracted.'
+                }
+              </p>
+              <p>
+                <b>{'New to Hadoop?'}</b><br />{'Jumbo is made for you!'}<br />{'Within the CLI, you cannot misconfigure nor missplace any service.'}
+              </p>
+            </Grid>
+            <Grid item xs={12} sm={6} >
+              <img className={classes.gridImg} src='https://camo.githubusercontent.com/aa0e83cbfef51640e86b56835fa4da67cef3a7c8/68747470733a2f2f692e696d6775722e636f6d2f434f4833614d6d2e706e67' />
+            </Grid>
           </Grid>
-          <Grid item xs={12} sm={6}>
-            <h3>{'Idempotence'}</h3>
-            <p>
-              {
-                'Call a function multiple times and expect the same result. You’ll be informed of any modifications and can retrieve defailed information.'
-              }
+          <Grid item container spacing={32} xs={12} sm={12} >
+            <Grid item xs={12} sm={6} >
+              <img className={classes.gridImg} src={schema} />
+            </Grid>
+            <Grid item xs={12} sm={6} >
+              <h3>RELY ON TRUSTED TOOLS</h3>
+              <p>
+                Jumbo leverages trusted DevOps tools to provision the clusters on local virtual machines:
             </p>
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <h3>{'Flexibility'}</h3>
-            <p>
-              {
-                'Deliberatly sacrifying speed for a maximum of strength, ease of use and flexibility. The simple API allows us to constantly add new functionnality without affecting the API.'
-              }
-            </p>
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <h3>{'Documentation'}</h3>
-            <p>
-              {
-                'Learn fast. Source code is self-documented with the most commons usages enriched by many examples. Don’t forget to look at the tests as well.'
-              }
-            </p>
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <h3>{'SSH support'}</h3>
-            <p>
-              {
-                'All the functions run transparently over SSH. Look at the tests, they are all executed both locally and remotely.'
-              }
-            </p>
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <h3>{'Reporting'}</h3>
-            <p>
-              {
-                'Advanced reports can be optained by providing a log function, listening to stdout and stderr streams, generating diffs and backups.'
-              }
-            </p>
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <h3>{'Reliability'}</h3>
-            <p>
-              {
-                'Feel confident. The modules are used in production for years and the code is enforced by an extensive test coverage.'
-              }
-            </p>
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <h3>{'Suppport'}</h3>
-            <p>
-              {
-                'The package is open sourced with one of the least restrictive license. Involve yourself and contributes to open source development by sending push requests or requesting commercial support offered by Adaltas.'
-              }
-            </p>
+              <ul>
+                <li><a href='https://www.vagrantup.com/'>Vagrant</a> to create virtual machines locally;</li>
+                <li><a href='https://www.ansible.com/'>Ansible</a> to configure the nodes and install needed services;</li>
+                <li><a href='https://ambari.apache.org/'>Apache Ambari</a> to install Hadoop services (<a href='https://fr.hortonworks.com/products/data-platforms/hdp/' >HDP</a> stack);</li>
+                <li><a href='https://www.freeipa.org/page/Main_Page'>FreeIPA</a> to secure the cluster (LDAP and Kerberos).</li>
+              </ul>
+            </Grid>
           </Grid>
         </Grid>
       </div>

@@ -48,6 +48,7 @@ const styles = theme => ({
   },
   title: {
     color: '#fff',
+    paddingTop: '4px',
     display: 'inline-block',
     fontSize: '2rem',
     fontWeight: 'bold',
