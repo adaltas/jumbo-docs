@@ -3,16 +3,20 @@ import React from 'react'
 import { withStyles } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
 import schema from './../layouts/home/jumbo.svg'
+import shell from '../layouts/home/jumbo-shell.png'
 
 const styles = theme => ({
   root: {
     flexGrow: 1,
   },
   gridItemOdd: {
-    textAlign: 'right'
+    textAlign: 'right',
+  },
+  imgContainer: {
+    textAlign: 'center'
   },
   gridImg: {
-    maxWidth: '100%'
+    maxWidth: '100%',
   }
 })
 
@@ -34,12 +38,12 @@ class IndexPage extends React.Component {
                 <b>{'New to Hadoop?'}</b><br />{'Jumbo is made for you!'}<br />{'Within the CLI, you cannot misconfigure nor missplace any service.'}
               </p>
             </Grid>
-            <Grid item xs={12} sm={6} >
-              <img className={classes.gridImg} src='https://camo.githubusercontent.com/aa0e83cbfef51640e86b56835fa4da67cef3a7c8/68747470733a2f2f692e696d6775722e636f6d2f434f4833614d6d2e706e67' />
+            <Grid item xs={12} sm={6} className={classes.imgContainer} >
+              <img className={classes.gridImg} src={shell} />
             </Grid>
           </Grid>
           <Grid item container spacing={32} xs={12} sm={12} >
-            <Grid item xs={12} sm={6} >
+            <Grid item xs={12} sm={6} className={classes.imgContainer} >
               <img className={classes.gridImg} src={schema} />
             </Grid>
             <Grid item xs={12} sm={6} >

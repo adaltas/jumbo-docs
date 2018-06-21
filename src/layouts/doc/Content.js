@@ -75,9 +75,13 @@ const styles = theme => ({
       paddingLeft: '0.75em',
       borderLeft: '0.25em solid #7ec699'
     },
+    '& img': {
+      maxWidth: '90%',
+      margin: 'auto'
+    },
     '& table': {
       width: '95%',
-      margin: 'auto'
+      margin: 'auto',
     },
     '& table, & th, & td': {
       borderCollapse: 'collapse',
