@@ -5,6 +5,7 @@ import Helmet from 'react-helmet'
 import 'typeface-roboto'
 
 import { withStyles } from '@material-ui/core/styles'
+import { isWidthDown } from '@material-ui/core/withWidth';
 import withRoot from './mui/withRoot'
 import Hidden from '@material-ui/core/Hidden'
 
@@ -32,17 +33,17 @@ class Layout extends React.Component {
     drawerOpen: true,
   }
   render() {
-    const { children, classes, data } = this.props
+    const { children, classes, data, width } = this.props
     const site = data.site.siteMetadata
     const onToggle = () => {
       this.setState({ drawerOpen: !this.state.drawerOpen })
     }
-    const menu = {children: {}}
-    data.menu.edges.map( edge => {
-      const slugs = edge.node.fields.slug.split('/').filter( part => part )
+    const menu = { children: {} }
+    data.menu.edges.map(edge => {
+      const slugs = edge.node.fields.slug.split('/').filter(part => part)
       let parentMenu = menu
-      slugs.map( slug => {
-        if( !parentMenu.children[slug] ) parentMenu.children[slug] = {data: {}, children: {}}
+      slugs.map(slug => {
+        if (!parentMenu.children[slug]) parentMenu.children[slug] = { data: {}, children: {} }
         parentMenu = parentMenu.children[slug]
       })
       parentMenu.data = {
@@ -62,7 +63,10 @@ class Layout extends React.Component {
           ]}
         />
         <Hidden mdUp>
-          <AppBar onMenuClick={onToggle} site={site} />
+          <AppBar
+            open={!this.state.drawerOpen}
+            onMenuClick={onToggle}
+            site={site} />
         </Hidden>
         <Hidden smDown implementation="css">
           <AppBar
@@ -79,8 +83,8 @@ class Layout extends React.Component {
           >
             {
               Object.values(menu.children)
-              .sort( (p1, p2) => p1.data.sort > p2.data.sort )
-              .map( page => <Menu key={page.data.slug} menu={page} path={this.state.path} />)
+                .sort((p1, p2) => p1.data.sort > p2.data.sort)
+                .map(page => <Menu key={page.data.slug} menu={page} path={this.state.path} />)
             }
           </Drawer>
         </Hidden>
@@ -92,8 +96,8 @@ class Layout extends React.Component {
           >
             {
               Object.values(menu.children)
-              .sort( (p1, p2) => p1.data.sort > p2.data.sort )
-              .map( page => <Menu key={page.data.slug} menu={page} path={this.state.path} />)
+                .sort((p1, p2) => p1.data.sort > p2.data.sort)
+                .map(page => <Menu key={page.data.slug} menu={page} path={this.state.path} />)
             }
           </Drawer>
         </Hidden>

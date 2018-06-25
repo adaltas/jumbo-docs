@@ -18,6 +18,9 @@ const styles = theme => ({
     alignItems: 'flex-start',
     justifyContent: 'center',
   },
+  drawer: {
+    width: 0
+  },
   drawerShift: {
     width: 250,
     transition: theme.transitions.create('width', {

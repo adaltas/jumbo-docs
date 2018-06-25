@@ -31,6 +31,11 @@ const styles = theme => ({
     fontFamily: 'roboto',
     fontSize: '20px',
   },
+  subHeading: {
+    maxWidth: '90%',
+    marginLeft: 'auto',
+    marginRight: 'auto'
+  },
   button: {
     margin: theme.spacing.unit,
   },
@@ -61,15 +66,10 @@ const styles = theme => ({
 
 class Layout extends React.Component {
   state = {
-    drawerOpen: false,
-    particlesHeight: 0,
-  }
-  componentDidMount() {
-    this.setState({ particlesHeight: window.innerHeight })
+    drawerOpen: true
   }
   render() {
     const { children, classes, data } = this.props
-    const { particlesHeight } = this.state
     const site = data.site.siteMetadata
     const onToggle = () => {
       this.setState({ drawerOpen: !this.state.drawerOpen })
@@ -103,6 +103,7 @@ class Layout extends React.Component {
             ref={child => {
               this.appbar = child
             }}
+            open={!this.state.drawerOpen}
             onMenuClick={onToggle}
             site={site}
             opacity={0.3}
@@ -113,7 +114,7 @@ class Layout extends React.Component {
             ref={child => {
               this.appbar = child
             }}
-            open={this.state.drawerOpen}
+            open={!this.state.drawerOpen}
             onMenuClick={onToggle}
             site={site}
             opacity={0.3}
@@ -134,7 +135,7 @@ class Layout extends React.Component {
         </Hidden>
         <Hidden smDown implementation="css">
           <Drawer
-            open={this.state.drawerOpen}
+            open={!this.state.drawerOpen}
             onClickShadow={onToggle}
             variant="persistent"
           >
@@ -149,8 +150,8 @@ class Layout extends React.Component {
           <div className={classes.jumboBig} >
             <span className={classes.content}>
               <img src={jum} className={classes.jumboImg} />
-              <p>{'A local Hadoop cluster bootstrapper for developers'}</p>
-              <p>{'Deploy virtualized clusters in minutes with Jumbo CLI'}</p>
+              <p className={classes.subHeading} >{'A local Hadoop cluster bootstrapper for developers'}</p>
+              <p className={classes.subHeading}>{'Deploy virtualized clusters in minutes with Jumbo CLI'}</p>
               <Link to="/getting-started/" className={classes.buttonLink}>
                 <Button
                   size="large"
