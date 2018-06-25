@@ -32,8 +32,10 @@ Delete a cluster previously created. On deletion, the Vagrant virtual machines o
 
 **Command: `exit`**
 
-> **info**
-> Only usefull in the Jumbo shell.
+<hint-box
+    type='info'
+    text='Only useful in the Jumbo shell.'
+    ></hint-box>
 
 Clean the Jumbo shell context.
 
@@ -123,8 +125,10 @@ Stop the virtual machines of a cluster.
 
 **Command: `use [name]`**
 
-> **info**
-> Only usefull in the Jumbo shell.
+<hint-box
+    type='info'
+    text='Only useful in the Jumbo shell.'
+    ></hint-box>
 
 Set the context to a previously created cluster. The context allows to use Jumbo without specifying the cluster on every command. The current context is indicated next to `jumbo` in the shell:
 
