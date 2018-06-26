@@ -3,6 +3,7 @@
 
 ## Trunk
 
+* plugins: move gatsby-plugin-material-ui up
 * changelog: new page
 * footer: set main section links
 * conditions: add assertions

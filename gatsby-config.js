@@ -35,6 +35,7 @@ module.exports = {
     }]
   },
   plugins: [
+    `gatsby-plugin-material-ui`,
     `gatsby-plugin-react-next`,
     `gatsby-plugin-react-helmet`,
     {
@@ -79,9 +80,6 @@ module.exports = {
           },
         ],
       },
-    },
-    {
-      resolve: `gatsby-plugin-material-ui`
     }
   ]
 }
