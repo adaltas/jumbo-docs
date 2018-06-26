@@ -5,6 +5,10 @@ module.exports = {
       url: 'https://github.com/adaltas/jumbo',
       title: 'Jumbo GitHub Repository'
     },
+    issues: {
+      url: 'https://github.com/adaltas/jumbo-docs/issues',
+      title: 'Report an issue'
+    },
     footer: [{
       title: 'Navigate',
       links: [{

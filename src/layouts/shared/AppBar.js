@@ -8,6 +8,7 @@ import Toolbar from '@material-ui/core/Toolbar'
 import IconButton from '@material-ui/core/IconButton'
 import Tooltip from '@material-ui/core/Tooltip'
 import MenuIcon from '@material-ui/icons/Menu'
+import LightbulbOutline from '@material-ui/icons/LightbulbOutline'
 import Github from '@material-ui/docs/svgIcons/GitHub'
 import { withStyles } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
@@ -107,11 +108,24 @@ class MyAppBar extends Component {
             <MenuIcon />
           </IconButton>
           <Link to="/">
-            <Typography className={classes.title} noWrap>
+            <Typography className={classes.title} color="inherit" noWrap>
               {site.title}
             </Typography>
           </Link>
           <div className={classes.grow} />
+          <Tooltip
+            id="appbar-theme"
+            title={site.issues.title}
+            enterDelay={300}
+          >
+            <IconButton
+              color="inherit"
+              onClick={site.issues.url}
+              aria-labelledby="appbar-theme"
+            >
+              <LightbulbOutline />
+            </IconButton>
+          </Tooltip>
           <Tooltip
             id="appbar-github"
             title={site.github.title}
