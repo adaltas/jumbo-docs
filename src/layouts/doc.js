@@ -9,10 +9,10 @@ import { isWidthDown } from '@material-ui/core/withWidth';
 import withRoot from './mui/withRoot'
 import Hidden from '@material-ui/core/Hidden'
 
-import AppBar from './doc/AppBar'
-import Content from './doc/Content'
-import Drawer from './doc/Drawer'
-import Footer from './doc/Footer'
+import AppBar from './shared/AppBar'
+import Content from './shared/Content'
+import Drawer from './shared/Drawer'
+import Footer from './shared/Footer'
 import Menu from './shared/Menu'
 
 const styles = theme => ({

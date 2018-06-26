@@ -3,6 +3,7 @@
 
 ## Trunk
 
+* layout: isolate shared modules
 * plugins: move gatsby-plugin-material-ui up
 * changelog: new page
 * footer: set main section links

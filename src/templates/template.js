@@ -1,8 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import Layout from '../layouts/doc'
 import rehypeReact from 'rehype-react'
-import HintBox from './../layouts/doc/HintBox'
+import HintBox from './../layouts/shared/HintBox'
 
 const renderAst = new rehypeReact({
   createElement: React.createElement,
