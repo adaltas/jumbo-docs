@@ -42,7 +42,6 @@ class Menu extends React.Component {
   handleClick = (e) => {
     // e.stopPropagation()
     this.setState({ open: !this.state.open })
-    console.log('state', this.state.open)
   }
   navigate = (to) => {
     const { menu } = this.props
