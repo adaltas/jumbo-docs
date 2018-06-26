@@ -25,7 +25,7 @@ const styles = theme => ({
       position: 'absolute',
     },
     // backgroundColor: 'unset',
-    backgroundColor: 'rgba(126, 198, 153)',
+    backgroundColor: 'rgba(126, 198, 153, 1)',
     // backgroundColor: 'rgba( 18, 40, 47, 1)',
     // Doc
     // backgroundColor: '#000 !important',
