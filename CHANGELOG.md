@@ -3,6 +3,7 @@
 
 ## Trunk
 
+* Menu: close temporary drawer on click
 * layout doc: remove unused code
 * layout: isolate shared modules
 * plugins: move gatsby-plugin-material-ui up

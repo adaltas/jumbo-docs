@@ -75,12 +75,12 @@ class Layout extends React.Component {
     const onToggle = () => {
       this.setState({ drawerOpen: !this.state.drawerOpen })
     }
-    const menu = {children: {}}
-    data.menu.edges.map( edge => {
-      const slugs = edge.node.fields.slug.split('/').filter( part => part )
+    const menu = { children: {} }
+    data.menu.edges.map(edge => {
+      const slugs = edge.node.fields.slug.split('/').filter(part => part)
       let parentMenu = menu
-      slugs.map( slug => {
-        if( !parentMenu.children[slug] ) parentMenu.children[slug] = {data: {}, children: {}}
+      slugs.map(slug => {
+        if (!parentMenu.children[slug]) parentMenu.children[slug] = { data: {}, children: {} }
         parentMenu = parentMenu.children[slug]
       })
       parentMenu.data = {
@@ -101,9 +101,6 @@ class Layout extends React.Component {
         />
         <Hidden mdUp>
           <AppBar
-            ref={child => {
-              this.appbar = child
-            }}
             open={!this.state.drawerOpen}
             onMenuClick={onToggle}
             site={site}
@@ -112,9 +109,6 @@ class Layout extends React.Component {
         </Hidden>
         <Hidden smDown implementation="css">
           <AppBar
-            ref={child => {
-              this.appbar = child
-            }}
             open={!this.state.drawerOpen}
             onMenuClick={onToggle}
             site={site}
@@ -130,7 +124,7 @@ class Layout extends React.Component {
             {
               Object.values(menu.children)
               .sort( (p1, p2) => p1.data.sort > p2.data.sort )
-              .map( page => <Menu key={page.data.slug} menu={page} path={this.state.path} />)
+              .map( page => <Menu key={page.data.slug} menu={page} path={this.state.path} onClickLink={onToggle} />)
             }
           </Drawer>
         </Hidden>
