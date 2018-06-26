@@ -3,6 +3,7 @@
 
 ## Trunk
 
+* Drawer: link title to home
 * Menu: close temporary drawer on click
 * layout doc: remove unused code
 * layout: isolate shared modules
