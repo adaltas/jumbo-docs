@@ -5,7 +5,6 @@ import Helmet from 'react-helmet'
 import 'typeface-roboto'
 
 import { withStyles } from '@material-ui/core/styles'
-import { isWidthDown } from '@material-ui/core/withWidth';
 import withRoot from './mui/withRoot'
 import Hidden from '@material-ui/core/Hidden'
 
@@ -33,7 +32,7 @@ class Layout extends React.Component {
     drawerOpen: true,
   }
   render() {
-    const { children, classes, data, width } = this.props
+    const { children, classes, data } = this.props
     const site = data.site.siteMetadata
     const onToggle = () => {
       this.setState({ drawerOpen: !this.state.drawerOpen })

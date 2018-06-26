@@ -3,6 +3,7 @@
 
 ## Trunk
 
+* layout doc: remove unused code
 * layout: isolate shared modules
 * plugins: move gatsby-plugin-material-ui up
 * changelog: new page
