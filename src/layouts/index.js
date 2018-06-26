@@ -64,6 +64,7 @@ const styles = theme => ({
   }
 })
 
+
 class Layout extends React.Component {
   state = {
     drawerOpen: true
@@ -74,12 +75,12 @@ class Layout extends React.Component {
     const onToggle = () => {
       this.setState({ drawerOpen: !this.state.drawerOpen })
     }
-    const menu = { children: {} }
-    data.menu.edges.map(edge => {
-      const slugs = edge.node.fields.slug.split('/').filter(part => part)
+    const menu = {children: {}}
+    data.menu.edges.map( edge => {
+      const slugs = edge.node.fields.slug.split('/').filter( part => part )
       let parentMenu = menu
-      slugs.map(slug => {
-        if (!parentMenu.children[slug]) parentMenu.children[slug] = { data: {}, children: {} }
+      slugs.map( slug => {
+        if( !parentMenu.children[slug] ) parentMenu.children[slug] = {data: {}, children: {}}
         parentMenu = parentMenu.children[slug]
       })
       parentMenu.data = {
@@ -128,8 +129,8 @@ class Layout extends React.Component {
           >
             {
               Object.values(menu.children)
-                .sort((p1, p2) => p1.data.sort > p2.data.sort)
-                .map(page => <Menu key={page.data.slug} menu={page} path={this.state.path} />)
+              .sort( (p1, p2) => p1.data.sort > p2.data.sort )
+              .map( page => <Menu key={page.data.slug} menu={page} path={this.state.path} />)
             }
           </Drawer>
         </Hidden>
@@ -141,8 +142,8 @@ class Layout extends React.Component {
           >
             {
               Object.values(menu.children)
-                .sort((p1, p2) => p1.data.sort > p2.data.sort)
-                .map(page => <Menu key={page.data.slug} menu={page} path={this.state.path} />)
+              .sort( (p1, p2) => p1.data.sort > p2.data.sort )
+              .map( page => <Menu key={page.data.slug} menu={page} path={this.state.path} />)
             }
           </Drawer>
         </Hidden>
@@ -190,6 +191,10 @@ export const query = graphql`
       siteMetadata {
         title
         github {
+          url
+          title
+        }
+        issues {
           url
           title
         }

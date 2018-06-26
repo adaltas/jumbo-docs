@@ -66,7 +66,8 @@ class Layout extends React.Component {
           <AppBar
             open={!this.state.drawerOpen}
             onMenuClick={onToggle}
-            site={site} />
+            site={site}
+          />
         </Hidden>
         <Hidden smDown implementation="css">
           <AppBar
@@ -118,6 +119,10 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         github {
+          url
+          title
+        }
+        issues {
           url
           title
         }
