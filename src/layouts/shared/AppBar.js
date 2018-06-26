@@ -62,9 +62,6 @@ const styles = theme => ({
 })
 
 class MyAppBar extends Component {
-  state = {
-    toto: 50,
-  }
   static defaultProps = {
     opacity: 1,
   }
@@ -120,7 +117,7 @@ class MyAppBar extends Component {
           >
             <IconButton
               color="inherit"
-              onClick={site.issues.url}
+              href={site.issues.url}
               aria-labelledby="appbar-theme"
             >
               <LightbulbOutline />
