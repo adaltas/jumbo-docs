@@ -80,8 +80,10 @@ const styles = theme => ({
       margin: 'auto'
     },
     '& table': {
-      width: '95%',
+      maxWidth: '95%',
       margin: 'auto',
+      display: 'block',
+      overflow: 'auto'
     },
     '& table, & th, & td': {
       borderCollapse: 'collapse',

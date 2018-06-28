@@ -13,7 +13,8 @@ import Link from 'gatsby-link'
 const styles = theme => ({
   toolbar: {
     ...theme.mixins.toolbar,
-    paddingLeft: theme.spacing.unit * 3,
+    paddingLeft: '16px',
+    paddingTop: '8px',
     display: 'flex',
     flexGrow: 1,
     flexDirection: 'column',
