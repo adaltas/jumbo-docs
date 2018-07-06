@@ -7,7 +7,7 @@ sort: 2
 
 ## Create
 
-**Command: `create [name]`**
+**Command: `create <name>`**
 
 Create a new empty cluster with a specified name. After the cluster creation, the context is automatically set to this cluster.
 
@@ -20,7 +20,7 @@ Create a new empty cluster with a specified name. After the cluster creation, th
 ---
 ## Delete
 
-**Command: `delete [name]`**
+**Command: `delete <name>`**
 
 Delete a cluster previously created. On deletion, the Vagrant virtual machines of the cluster are also destroyed.
 
@@ -60,7 +60,7 @@ Start the virtual machines and force provisioning.
 ---
 ## Repair
 
-**Command: `repair [name]`**
+**Command: `repair <name>`**
 
 Recreate a `jumbo_config` file for a cluster if it has been destroyed. If this is the case, Jumbo will let you know with an error message.
 
@@ -78,7 +78,7 @@ Restart the virtual machines of a cluster.
 ---
 ## Set repo
 
-**Command: `setrepo [name]`**
+**Command: `setrepo <name>`**
 
 Set an URL to use for repositories downloads. The repositories that can be set are `ambari_repo` and `vdf`. See the [Advanced usage](../../getting-started/advanced-usage) section for more details.
 
@@ -123,7 +123,7 @@ Stop the virtual machines of a cluster.
 ---
 ## Use
 
-**Command: `use [name]`**
+**Command: `use <name>`**
 
 <hint-box
     type='info'

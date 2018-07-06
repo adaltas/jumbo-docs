@@ -7,7 +7,7 @@ sort: 5
 
 ## Add component
 
-**Command: `addcomponent [name]`**
+**Command: `addcomponent <name>`**
 
 Add a component to a node.
 The list of the components is available in the [Supported services](../../about/supported) section.
@@ -33,13 +33,13 @@ List the components installed on a node.
 ---
 ## Remove component
 
-**Command: `rmcomponent [name]`**
+**Command: `rmcomponent <name>`**
 
 Remove a component of a node.
 
 **Options**
 
-- `--node` or `-n` - The node of which the component should be removed.
+- `--node` or `-n` (required) - The node of which the component should be removed.
 - `--cluster` or `-c` - The cluster of the node(s).
 - `--force` or `-f` - Avoid the confirmation prompt.
 

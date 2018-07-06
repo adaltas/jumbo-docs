@@ -7,7 +7,7 @@ sort: 3
 
 ## Add node
 
-**Command: `addnode [name]`**
+**Command: `addnode <name>`**
 
 Add a new empty node to a cluster.
 
@@ -33,7 +33,7 @@ List the nodes of a cluster.
 ---
 ## Remove node
 
-**Command: `rmnode [name]`**
+**Command: `rmnode <name>`**
 
 Remove a node from a cluster.
 

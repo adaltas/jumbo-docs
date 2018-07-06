@@ -6,7 +6,7 @@ module.exports = {
       title: 'Jumbo GitHub Repository'
     },
     issues: {
-      url: 'https://github.com/adaltas/jumbo-docs/issues',
+      url: 'https://github.com/adaltas/jumbo/issues',
       title: 'Report an issue'
     },
     footer: [{

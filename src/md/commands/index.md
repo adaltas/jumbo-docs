@@ -12,7 +12,7 @@ In this section you will find all the commands available in the Jumbo CLI to man
 - [components](component)
 
 There are two ways of using the CLI:
-- By typing each command individually with `jumbo [command]` in your terminal;
+- By typing each command individually with `jumbo <command>` in your terminal;
 - By entering the Jumbo shell.
 
 We recommand using the shell, because it makes commands lighter and optimizes data loading. However it is sometimes not possible to enter a shell (e.g. in bash scripts). 
