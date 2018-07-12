@@ -34,7 +34,7 @@ jumbo (anothercluster) >
 
 When creating a cluster, you can reference a template. The cluster will then be configured in one second:
 
-```
+```markdown{1,4}
 jumbo > create mycluster --template small-full
 Creating mycluster...
 Cluster "mycluster" created (domain name = "mycluster.local").
