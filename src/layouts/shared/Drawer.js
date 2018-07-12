@@ -60,7 +60,7 @@ class AppDrawer extends React.Component {
                 Documentation
               </Typography>
             </Link>
-            <Typography variant="caption">{'version 0.4.1'}</Typography>
+            <Typography variant="caption">{'version 0.4.2'}</Typography>
           </div>
           <Divider />
         </div>

@@ -7,6 +7,8 @@ sort: 3
 
 ## Jumbo versions
 
+- **v0.4.2** - 12/07/2018: **Templates for clusters**
+    - New option for [`create`](../../commands/cluster) command: `--template`
 - **v0.4.1** - 05/06/2018: **Vagrant commands integration and `-r` tag for `addservice`**
     - New commands: `start`, `stop`, `restart`, `status` to interact with the cluster directly within Jumbo
     - New tag `--recursive` for `addservice` to add a service and all its dependencies

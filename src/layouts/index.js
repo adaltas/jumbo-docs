@@ -164,7 +164,7 @@ class Layout extends React.Component {
                   className={classes.button}
                   classes={{ outlined: classes.outlined }}
                 >
-                  {'New in 0.4.1'}
+                  {'New in ' + site.version}
                 </Button>
               </Link>
             </span>
@@ -184,6 +184,7 @@ export const query = graphql`
     site: site {
       siteMetadata {
         title
+        version
         github {
           url
           title
