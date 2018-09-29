@@ -3,6 +3,7 @@
 
 ## Trunk
 
+* package: analytics tracking code
 * Drawer: link title to home
 * Menu: close temporary drawer on click
 * layout doc: remove unused code
