@@ -1,102 +1,102 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
+import React from "react";
+import PropTypes from "prop-types";
+import Helmet from "react-helmet";
 
-import 'typeface-roboto'
+import "typeface-roboto";
 
-import { withStyles } from '@material-ui/core/styles'
-import withRoot from './mui/withRoot'
-import Hidden from '@material-ui/core/Hidden'
-import Button from '@material-ui/core/Button'
+import { withStyles } from "@material-ui/core/styles";
+import withRoot from "./mui/withRoot";
+import Hidden from "@material-ui/core/Hidden";
+import Button from "@material-ui/core/Button";
 
-import AppBar from './shared/AppBar'
-import Content from './shared/Content'
-import Drawer from './shared/Drawer'
-import Footer from './shared/Footer'
-import Menu from './shared/Menu'
+import AppBar from "./shared/AppBar";
+import Content from "./shared/Content";
+import Drawer from "./shared/Drawer";
+import Footer from "./shared/Footer";
+import Menu from "./shared/Menu";
 // Gatsby
-import Link from 'gatsby-link'
+import Link from "gatsby-link";
 // Jumbo logo
-import jum from './home/jumbo-clear.png'
+import jum from "./home/jumbo-clear.png";
 
 const styles = theme => ({
   root: {
-    display: 'flex',
-    alignItems: 'stretch',
-    minHeight: '100vh',
-    width: '100%',
+    display: "flex",
+    alignItems: "stretch",
+    minHeight: "100vh",
+    width: "100%"
   },
   content: {
-    width: '100%',
-    fontFamily: 'roboto',
-    fontSize: '20px',
+    width: "100%",
+    fontFamily: "roboto",
+    fontSize: "20px"
   },
   subHeading: {
-    maxWidth: '90%',
-    marginLeft: 'auto',
-    marginRight: 'auto'
+    maxWidth: "90%",
+    marginLeft: "auto",
+    marginRight: "auto"
   },
   button: {
-    margin: theme.spacing.unit,
+    margin: theme.spacing.unit
   },
   outlined: {
-    borderColor: '#7ec699',
-    color: '#7ec699',
+    borderColor: "#7ec699",
+    color: "#7ec699",
     // backgroundColor: 'rgba(0, 0, 0, 0.2)',
-    backgroundColor: 'rgba(255, 255, 255, 0.08)',
-    '&:hover': {
-      backgroundColor: 'rgba(255, 255, 255, 0.2)',
-    },
+    backgroundColor: "rgba(255, 255, 255, 0.08)",
+    "&:hover": {
+      backgroundColor: "rgba(255, 255, 255, 0.2)"
+    }
   },
   buttonLink: {
-    color: '#ffffff00'
+    color: "#ffffff00"
   },
   jumboBig: {
-    textAlign: 'center',
-    height: '500px',
-    paddingTop: '150px',
-    backgroundImage: 'linear-gradient(#2B2D42b8, #2B2D42)',
-    color: '#f0f7f4',
+    textAlign: "center",
+    height: "500px",
+    paddingTop: "150px",
+    backgroundImage: "linear-gradient(#2B2D42b8, #2B2D42)",
+    color: "#f0f7f4"
   },
   jumboImg: {
-    maxHeight: '111px',
-    maxWidth: '80%'
+    maxHeight: "111px",
+    maxWidth: "80%"
   }
-})
-
+});
 
 class Layout extends React.Component {
   state = {
     drawerOpen: true
-  }
+  };
   render() {
-    const { children, classes, data } = this.props
-    const site = data.site.siteMetadata
+    const { children, classes, data } = this.props;
+    const site = data.site.siteMetadata;
     const onToggle = () => {
-      this.setState({ drawerOpen: !this.state.drawerOpen })
-    }
-    const menu = { children: {} }
+      this.setState({ drawerOpen: !this.state.drawerOpen });
+    };
+    const menu = { children: {} };
     data.menu.edges.map(edge => {
-      const slugs = edge.node.fields.slug.split('/').filter(part => part)
-      let parentMenu = menu
+      const slugs = edge.node.fields.slug.split("/").filter(part => part);
+      let parentMenu = menu;
       slugs.map(slug => {
-        if (!parentMenu.children[slug]) parentMenu.children[slug] = { data: {}, children: {} }
-        parentMenu = parentMenu.children[slug]
-      })
+        if (!parentMenu.children[slug])
+          parentMenu.children[slug] = { data: {}, children: {} };
+        parentMenu = parentMenu.children[slug];
+      });
       parentMenu.data = {
-        id: slugs.join('/'),
+        id: slugs.join("/"),
         title: edge.node.frontmatter.title,
         slug: edge.node.fields.slug,
         sort: edge.node.frontmatter.sort || 99
-      }
-    })
+      };
+    });
     return (
       <div className={classes.root}>
         <Helmet
           title={site.title}
           meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
+            { name: "description", content: "Sample" },
+            { name: "keywords", content: "sample, something" }
           ]}
         />
         <Hidden mdUp>
@@ -121,11 +121,16 @@ class Layout extends React.Component {
             onClickShadow={onToggle}
             variant="temporary"
           >
-            {
-              Object.values(menu.children)
-                .sort((p1, p2) => p1.data.sort > p2.data.sort)
-                .map(page => <Menu key={page.data.slug} menu={page} path={this.state.path} onClickLink={onToggle} />)
-            }
+            {Object.values(menu.children)
+              .sort((p1, p2) => p1.data.sort > p2.data.sort)
+              .map(page => (
+                <Menu
+                  key={page.data.slug}
+                  menu={page}
+                  path={this.state.path}
+                  onClickLink={onToggle}
+                />
+              ))}
           </Drawer>
         </Hidden>
         <Hidden smDown implementation="css">
@@ -134,19 +139,23 @@ class Layout extends React.Component {
             onClickShadow={onToggle}
             variant="persistent"
           >
-            {
-              Object.values(menu.children)
-                .sort((p1, p2) => p1.data.sort > p2.data.sort)
-                .map(page => <Menu key={page.data.slug} menu={page} path={this.state.path} />)
-            }
+            {Object.values(menu.children)
+              .sort((p1, p2) => p1.data.sort > p2.data.sort)
+              .map(page => (
+                <Menu key={page.data.slug} menu={page} path={this.state.path} />
+              ))}
           </Drawer>
         </Hidden>
         <div ref="content" className={classes.content}>
-          <div className={classes.jumboBig} >
+          <div className={classes.jumboBig}>
             <span className={classes.content}>
               <img src={jum} className={classes.jumboImg} />
-              <p className={classes.subHeading} >{'A local Hadoop cluster bootstrapper for developers'}</p>
-              <p className={classes.subHeading}>{'Deploy virtualized clusters in minutes with Jumbo CLI'}</p>
+              <p className={classes.subHeading}>
+                {"A local Hadoop cluster bootstrapper for developers"}
+              </p>
+              <p className={classes.subHeading}>
+                {"Deploy virtualized clusters in minutes with Jumbo CLI"}
+              </p>
               <Link to="/getting-started/" className={classes.buttonLink}>
                 <Button
                   size="large"
@@ -154,7 +163,7 @@ class Layout extends React.Component {
                   className={classes.button}
                   classes={{ outlined: classes.outlined }}
                 >
-                  {'Get started'}
+                  {"Get started"}
                 </Button>
               </Link>
               <Link to="/overview/versions" className={classes.buttonLink}>
@@ -164,7 +173,7 @@ class Layout extends React.Component {
                   className={classes.button}
                   classes={{ outlined: classes.outlined }}
                 >
-                  {'New in ' + site.version}
+                  {"New in " + site.version}
                 </Button>
               </Link>
             </span>
@@ -173,11 +182,11 @@ class Layout extends React.Component {
           <Footer site={site} />
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default withRoot(withStyles(styles, { withTheme: true })(Layout))
+export default withRoot(withStyles(styles, { withTheme: true })(Layout));
 
 export const query = graphql`
   query IndexQuery {
@@ -204,7 +213,10 @@ export const query = graphql`
       }
     }
     menu: allMarkdownRemark(
-      filter: { frontmatter: { disabled: { eq: false } }, fields: { slug: { regex: "/^/.+/" } } }
+      filter: {
+        frontmatter: { disabled: { eq: false } }
+        fields: { slug: { regex: "/^/.+/" } }
+      }
       sort: { order: ASC, fields: [frontmatter___sort] }
     ) {
       edges {
@@ -222,4 +234,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

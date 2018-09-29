@@ -1,43 +1,56 @@
 module.exports = {
   siteMetadata: {
-    title: 'Jumbo',
-    version: '0.4.2',
+    title: "Jumbo",
+    version: "0.4.3",
     github: {
-      url: 'https://github.com/adaltas/jumbo',
-      title: 'Jumbo GitHub Repository'
+      url: "https://github.com/adaltas/jumbo",
+      title: "Jumbo GitHub Repository"
     },
     issues: {
-      url: 'https://github.com/adaltas/jumbo/issues',
-      title: 'Report an issue'
+      url: "https://github.com/adaltas/jumbo/issues",
+      title: "Report an issue"
     },
-    footer: [{
-      title: 'Navigate',
-      links: [{
-        label: 'Overview',
-        url: '/overview/',
-      }, {
-        label: 'Getting started',
-        url: '/getting-started/',
-      }, {
-        label: 'Jumbo CLI',
-        url: '/commands/',
-      }]
-    }, {
-      title: 'Contribute',
-      links: [{
-        label: 'GitHub',
-        url: 'https://github.com/adaltas/jumbo',
-      }, {
-        label: 'Issue Tracker',
-        url: 'https://github.com/adaltas/jumbo/issues',
-      }, {
-        label: 'License',
-        url: 'https://github.com/adaltas/jumbo/blob/master/LICENSE',
-      }]
-    }, {
-      title: 'About',
-      content: 'Jumbo is an open source product hosted on <a href="https://www.github.com">GitHub</a> and developed by <a href="http://www.adaltas.com">Adaltas</a>.'
-    }]
+    footer: [
+      {
+        title: "Navigate",
+        links: [
+          {
+            label: "Overview",
+            url: "/overview/"
+          },
+          {
+            label: "Getting started",
+            url: "/getting-started/"
+          },
+          {
+            label: "Jumbo CLI",
+            url: "/commands/"
+          }
+        ]
+      },
+      {
+        title: "Contribute",
+        links: [
+          {
+            label: "GitHub",
+            url: "https://github.com/adaltas/jumbo"
+          },
+          {
+            label: "Issue Tracker",
+            url: "https://github.com/adaltas/jumbo/issues"
+          },
+          {
+            label: "License",
+            url: "https://github.com/adaltas/jumbo/blob/master/LICENSE"
+          }
+        ]
+      },
+      {
+        title: "About",
+        content:
+          'Jumbo is an open source product hosted on <a href="https://www.github.com">GitHub</a> and developed by <a href="http://www.adaltas.com">Adaltas</a>.'
+      }
+    ]
   },
   plugins: [
     `gatsby-plugin-material-ui`,
@@ -47,14 +60,15 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/md`,
-        name: "markdown-pages",
-      },
+        name: "markdown-pages"
+      }
       // },{
       //   resolve: `gatsby-plugin-typography`,
       //   options: {
       //     pathToConfigModule: `src/utils/typography.js`,
       //   },
-    }, {
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
@@ -80,11 +94,11 @@ module.exports = {
               // setting this to '{ sh: "bash" }' will let you use
               // the language "sh" which will highlight using the
               // bash highlighter.
-              aliases: {},
-            },
-          },
-        ],
-      },
+              aliases: {}
+            }
+          }
+        ]
+      }
     }
   ]
-}
+};

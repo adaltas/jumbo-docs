@@ -19,6 +19,7 @@ Create a new empty cluster with a specified name. After the cluster creation, th
 - `--vdf VDF-URL` - Specify the url where the [VDF file](https://docs.hortonworks.com/HDPDocuments/Ambari-2.6.0.0/bk_ambari-release-notes/content/ambari_relnotes-2.6.0.0-behavioral-changes.html) for the HDP stack should be downloaded. By default, it is the official VDF file for HDP 2.6.4.0 (http://public-repo-1.hortonworks.com/HDP/centos7/2.x/updates/2.6.4.0/HDP-2.6.4.0-91.xml).
 
 ---
+
 ## Delete
 
 **Command: `delete <name>`**
@@ -26,9 +27,11 @@ Create a new empty cluster with a specified name. After the cluster creation, th
 Delete a cluster previously created. On deletion, the Vagrant virtual machines of the cluster are also destroyed.
 
 **Options**
+
 - `--force` or `-f` - Avoid the confirmation message prompt.
 
 ---
+
 ## Exit
 
 **Command: `exit`**
@@ -41,6 +44,7 @@ Delete a cluster previously created. On deletion, the Vagrant virtual machines o
 Clean the Jumbo shell context.
 
 ---
+
 ## List clusters
 
 **Command: `listclusters`**
@@ -48,6 +52,7 @@ Clean the Jumbo shell context.
 List all the clusters managed by Jumbo. The list contains details about the domain names, the numbers of VMs, the services installed and the repositories URLs.
 
 ---
+
 ## Provision
 
 **Command: `provision`**
@@ -59,6 +64,7 @@ Start the virtual machines and force provisioning.
 - `--cluster` or `-c` - The cluster of the virtual machines.
 
 ---
+
 ## Repair
 
 **Command: `repair <name>`**
@@ -66,6 +72,7 @@ Start the virtual machines and force provisioning.
 Recreate a `jumbo_config` file for a cluster if it has been destroyed. If this is the case, Jumbo will let you know with an error message.
 
 ---
+
 ## Restart
 
 **Command: `restart`**
@@ -77,18 +84,7 @@ Restart the virtual machines of a cluster.
 - `--cluster` or `-c` - The cluster of the virtual machines.
 
 ---
-## Set repo
 
-**Command: `setrepo <name>`**
-
-Set an URL to use for repositories downloads. The repositories that can be set are `ambari_repo` and `vdf`. See the [Advanced usage](../../getting-started/advanced-usage) section for more details.
-
-**Options**
-
-- `--value` or `-v` - The actual url of the repository.
-- `--cluster` or `-c` - The cluster on which the url should be set.
-
----
 ## Start
 
 **Command: `start`**
@@ -100,6 +96,7 @@ Start the virtual machines of a cluster. Once started, starts the Hadoop service
 - `--cluster` or `-c` - The cluster of the virtual machines.
 
 ---
+
 ## Status
 
 **Command: `status`**
@@ -111,7 +108,8 @@ Give the status of the virtual machines of a cluster.
 - `--cluster` or `-c` - The cluster of the virtual machines.
 
 ---
-## Stop 
+
+## Stop
 
 **Command: `stop`**
 
@@ -122,6 +120,7 @@ Stop the virtual machines of a cluster.
 - `--cluster` or `-c` - The cluster of the virtual machines.
 
 ---
+
 ## Use
 
 **Command: `use <name>`**
