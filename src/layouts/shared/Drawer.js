@@ -1,26 +1,26 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react";
+import PropTypes from "prop-types";
 
-import { withStyles } from '@material-ui/core/styles'
-import classNames from 'classnames'
+import { withStyles } from "@material-ui/core/styles";
+import classNames from "classnames";
 
-import Divider from '@material-ui/core/Divider'
-import Drawer from '@material-ui/core/Drawer'
-import Typography from '@material-ui/core/Typography'
+import Divider from "@material-ui/core/Divider";
+import Drawer from "@material-ui/core/Drawer";
+import Typography from "@material-ui/core/Typography";
 // Gastby
-import Link from 'gatsby-link'
+import Link from "gatsby-link";
 
 const styles = theme => ({
   toolbar: {
     ...theme.mixins.toolbar,
-    paddingLeft: '16px',
-    paddingTop: '8px',
-    display: 'flex',
+    paddingLeft: "16px",
+    paddingTop: "8px",
+    display: "flex",
     flexGrow: 1,
-    flexDirection: 'column',
-    alignItems: 'flex-start',
-    '& a': {
-      textDecoration: 'none',
+    flexDirection: "column",
+    alignItems: "flex-start",
+    "& a": {
+      textDecoration: "none",
       color: theme.typography.title.color
     }
   },
@@ -29,24 +29,24 @@ const styles = theme => ({
   },
   drawerShift: {
     width: 250,
-    transition: theme.transitions.create('width', {
+    transition: theme.transitions.create("width", {
       easing: theme.transitions.easing.easeOut,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
+      duration: theme.transitions.duration.enteringScreen
+    })
   },
   paper: {
-    width: 250,
-  },
-})
+    width: 250
+  }
+});
 
 class AppDrawer extends React.Component {
   render() {
-    const { classes, open, children, onClickShadow, variant } = this.props
+    const { classes, open, children, onClickShadow, variant } = this.props;
     return (
       <Drawer
         className={classNames(classes.drawer, { [classes.drawerShift]: open })}
         classes={{
-          paper: classNames(classes.paper),
+          paper: classNames(classes.paper)
         }}
         variant={variant}
         anchor="left"
@@ -60,18 +60,18 @@ class AppDrawer extends React.Component {
                 Documentation
               </Typography>
             </Link>
-            <Typography variant="caption">{'version 0.4.2'}</Typography>
+            <Typography variant="caption">{"version 0.4.3"}</Typography>
           </div>
           <Divider />
         </div>
         {children}
       </Drawer>
-    )
+    );
   }
 }
 AppDrawer.propTypes = {
   classes: PropTypes.object.isRequired,
-  theme: PropTypes.object.isRequired,
-}
+  theme: PropTypes.object.isRequired
+};
 
-export default withStyles(styles, { withTheme: true })(AppDrawer)
+export default withStyles(styles, { withTheme: true })(AppDrawer);

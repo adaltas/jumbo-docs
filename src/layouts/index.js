@@ -17,7 +17,7 @@ import Menu from "./shared/Menu";
 // Gatsby
 import Link from "gatsby-link";
 // Jumbo logo
-import jum from "./home/jumbo-clear.png";
+import jum from "./home/jumbo-logo-type.svg";
 
 const styles = theme => ({
   root: {
@@ -42,10 +42,11 @@ const styles = theme => ({
   outlined: {
     borderColor: "#7ec699",
     color: "#7ec699",
-    // backgroundColor: 'rgba(0, 0, 0, 0.2)',
+    borderWidth: "2px",
     backgroundColor: "rgba(255, 255, 255, 0.08)",
     "&:hover": {
-      backgroundColor: "rgba(255, 255, 255, 0.2)"
+      backgroundColor: "#7ec699",
+      color: "#fff"
     }
   },
   buttonLink: {
@@ -53,14 +54,13 @@ const styles = theme => ({
   },
   jumboBig: {
     textAlign: "center",
-    height: "500px",
-    paddingTop: "150px",
-    backgroundImage: "linear-gradient(#2B2D42b8, #2B2D42)",
-    color: "#f0f7f4"
+    maxHeight: "500px",
+    paddingTop: "120px"
   },
   jumboImg: {
-    maxHeight: "111px",
-    maxWidth: "80%"
+    maxHeight: "250px",
+    maxWidth: "80%",
+    marginBottom: "20px"
   }
 });
 
@@ -150,12 +150,7 @@ class Layout extends React.Component {
           <div className={classes.jumboBig}>
             <span className={classes.content}>
               <img src={jum} className={classes.jumboImg} />
-              <p className={classes.subHeading}>
-                {"A local Hadoop cluster bootstrapper for developers"}
-              </p>
-              <p className={classes.subHeading}>
-                {"Deploy virtualized clusters in minutes with Jumbo CLI"}
-              </p>
+              <br />
               <Link to="/getting-started/" className={classes.buttonLink}>
                 <Button
                   size="large"
