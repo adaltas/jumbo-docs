@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: "Jumbo",
-    version: "0.4.3",
+    version: "0.4.4",
     github: {
       url: "https://github.com/adaltas/jumbo",
       title: "Jumbo GitHub Repository"
