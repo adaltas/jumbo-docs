@@ -21,10 +21,11 @@ const renderAst = new rehypeReact({
 const DocTemplate = ({ data }) => {
   const currentDoc = data.markdownRemark
   const docs = data.allMarkdownRemark
+  const docsVersion = data.site.siteMetadata.version
   return (
     <Layout>
-      <DocsSider id={currentDoc.id} docs={docs} />
-      <DocsDrawer id={currentDoc.id} docs={docs} />
+      <DocsSider id={currentDoc.id} docs={docs} version={docsVersion} />
+      <DocsDrawer id={currentDoc.id} docs={docs} version={docsVersion} />
       <Layout className={docsStyles.docsLayout}>
         <MainHeader />
         <Content>
@@ -58,6 +59,11 @@ export const query = graphql`
             slug
           }
         }
+      }
+    }
+    site {
+      siteMetadata {
+        version
       }
     }
   }

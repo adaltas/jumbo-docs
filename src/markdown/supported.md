@@ -1,5 +1,5 @@
 ---
-title: Supported services and comp... 
+title: Supported services and components
 sort: 5
 ---
 

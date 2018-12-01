@@ -33,6 +33,7 @@ class DocsDrawer extends React.Component {
           closable={false}
           visible={this.state.visible}
           onClose={this.closeDrawer}
+          title={'Jumbo Docs v' + this.props.version}
         >
           <DocsNav id={this.props.id} docs={this.props.docs} />
         </Drawer>

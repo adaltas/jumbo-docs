@@ -25,13 +25,12 @@ tr:nth-child(even) {
 
 .sider {
   height: 100vh;
-  position: fixed;
+  position: fixed !important;
   top: 0;
-  background-color: #f4f5ff;
 }
 
 .docs-layout {
-  margin-left: 200px;
+  margin-left: 300px;
 }
 
 .drawer-button {
@@ -49,10 +48,20 @@ tr:nth-child(even) {
   overflow: hidden;
 }
 
+.docs-version {
+  height: 64px;
+  color: #a8afff;
+  background-color: #47499f;
+  text-align: center;
+  line-height: 64px;
+  font-size: 18px;
+}
+
 .markdown {
   width: 800px;
   max-width: 80%;
   margin: auto;
+  margin-bottom: 40px;
   padding-top: 32px;
   font-weight: 200;
 }
@@ -95,6 +104,10 @@ pre[class*='language-'] {
   .markdown {
     max-width: 80%;
     margin: auto;
+  }
+  .docs-version {
+    font-size: 16px;
+    line-height: 24px;
   }
 }
 
