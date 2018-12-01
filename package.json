@@ -1,45 +1,51 @@
 {
-  "name": "jumbo-docs",
-  "description": "Jumbo Official Documentation",
-  "version": "0.0.0",
-  "author": "David Worms <david@adaltas.com>",
+  "name": "gatsby-starter-default",
+  "description": "Gatsby default starter",
+  "version": "1.0.0",
+  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
-    "@material-ui/core": "^1.4.2",
-    "@material-ui/docs": "^1.0.0-alpha.4",
-    "@material-ui/icons": "^2.0.0",
-    "gatsby": "^1.9.277",
-    "gatsby-link": "^1.6.46",
-    "gatsby-plugin-google-analytics": "^1.0.31",
-    "gatsby-plugin-material-ui": "^0.1.3",
-    "gatsby-plugin-react-helmet": "^2.0.11",
-    "gatsby-plugin-react-next": "^1.0.11",
-    "gatsby-remark-prismjs": "^2.0.5",
-    "gatsby-source-filesystem": "^1.5.39",
-    "gatsby-transformer-remark": "^1.7.44",
-    "prism-themes": "^1.0.1",
+    "antd": "^3.10.7",
+    "gatsby": "^2.0.38",
+    "gatsby-image": "^2.0.19",
+    "gatsby-plugin-less": "^2.0.7",
+    "gatsby-plugin-manifest": "^2.0.7",
+    "gatsby-plugin-offline": "^2.0.11",
+    "gatsby-plugin-react-helmet": "^3.0.1",
+    "gatsby-plugin-sharp": "^2.0.11",
+    "gatsby-remark-component": "^1.1.3",
+    "gatsby-remark-images": "^2.0.6",
+    "gatsby-remark-prismjs": "^3.0.3",
+    "gatsby-source-filesystem": "^2.0.7",
+    "gatsby-transformer-remark": "^2.1.11",
+    "gatsby-transformer-sharp": "^2.1.7",
+    "less": "^3.8.1",
+    "prismjs": "^1.15.0",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
     "react-helmet": "^5.2.0",
-    "react-markdown": "^3.4.1",
-    "react-particles-js": "^2.3.0",
-    "rehype-react": "^3.0.3",
-    "typeface-roboto": "0.0.54"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/adaltas/jumbo-docs"
+    "react-markdown": "^4.0.4",
+    "react-typography": "^0.16.13",
+    "rehype-react": "^3.1.0",
+    "typography": "^0.16.17",
+    "typography-theme-fairy-gates": "^0.15.11",
+    "typography-theme-noriega": "^0.15.10"
   },
   "keywords": [
     "gatsby"
   ],
   "license": "MIT",
-  "main": "n/a",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
-    "serve": "gatsby serve",
+    "start": "npm run develop",
+    "format": "prettier --write \"src/**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "prettier": "^1.14.0"
+    "prettier": "^1.14.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
   }
 }

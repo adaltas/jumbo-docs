@@ -1,78 +1,54 @@
+/**
+ * Implement Gatsby's Node APIs in this file.
+ *
+ * See: https://www.gatsbyjs.org/docs/node-apis/
+ */
 
+const path = require('path')
+const { createFilePath } = require('gatsby-source-filesystem')
 
-const path = require("path");
+exports.onCreateNode = ({ node, getNode, actions }) => {
+  const { createNodeField } = actions
 
-const { createFilePath } = require(`gatsby-source-filesystem`);
-
-exports.onCreatePage = ({ page, boundActionCreators }) => {
-  const { createPage } = boundActionCreators;
-  
-  return new Promise((resolve, reject) => {
-    if(page.path.match(/^\/test\//)){
-      page.layout = 'blank'
-      createPage(page)
-    }
-    if(!page.path.match(/^\/$/)){
-      page.layout = 'doc'
-    }
-    resolve();
-  });
-};
-
-exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
-  const { createNodeField } = boundActionCreators
-  if (node.internal.type === `MarkdownRemark`) {
-    node.frontmatter.disabled = !!node.frontmatter.disabled
-    slug = createFilePath({ node, getNode, basePath: `pages` })
+  if (node.internal.type === 'MarkdownRemark') {
+    const slug = createFilePath({ node, getNode, basePath: 'markdown' })
+    var slugNoSlash = slug.substr(0, slug.length - 1)
     createNodeField({
       node,
-      name: `slug`,
-      value: slug
+      name: 'slug',
+      value: 'docs' + slugNoSlash,
     })
   }
-};
+}
 
-exports.createPages = ({ boundActionCreators, graphql }) => {
-  const { createPage, createRedirect } = boundActionCreators;
-  const blogPostTemplate = path.resolve(`src/templates/template.js`);
-  return graphql(`
-    {
-      allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___sort] }
-        limit: 1000
-      ) {
-        edges {
-          node {
-            frontmatter {
-              title
-              layout
-              redirects
-              disabled
-            }
-            fields {
-              slug
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions
+  return new Promise((resolve, reject) => {
+    graphql(`
+      {
+        allMarkdownRemark {
+          edges {
+            node {
+              fields {
+                slug
+              }
             }
           }
         }
       }
-    }
-  `).then(result => {
-    if (result.errors) {
-      return Promise.reject(result.errors);
-    }
-    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      if(node.frontmatter.disabled) return
-      createPage({
-        path: node.fields.slug,
-        component: blogPostTemplate,
-        layout: node.frontmatter.layout || 'doc',
-        context: {}, // additional data can be passed via context
-      });
-      if(node.frontmatter.redirects){
-        node.frontmatter.redirects.map( redirect => {
-          createRedirect({ fromPath: redirect, toPath: node.fields.slug, isPermanent: true, redirectInBrowser: true })
+    `).then(result => {
+      result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+        createPage({
+          path: node.fields.slug,
+          component: path.resolve(`./src/templates/docs.js`),
+          context: {
+            // Data passed to context is available
+            // in page queries as GraphQL variables.
+            slug: node.fields.slug,
+          },
         })
-      }
-    });
-  });
-};
+      })
+      resolve()
+    })
+  })
+}

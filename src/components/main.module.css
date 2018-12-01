@@ -1,0 +1,41 @@
+.layout {
+  height: 100vh;
+}
+
+.header {
+  font-size: 28px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.header-link {
+  font-weight: bold;
+  color: white;
+  margin-right: 10px;
+}
+.header-link:hover {
+  color: white;
+}
+
+.header-logo {
+  margin-right: 5px;
+}
+
+.header-menu {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 18px;
+}
+
+.header-item-mobile {
+  display: none !important;
+}
+
+@media screen and (max-width: 600px) {
+  .header-item {
+    display: none !important;
+  }
+  .header-item-mobile {
+    display: block !important;
+  }
+}

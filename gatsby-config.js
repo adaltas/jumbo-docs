@@ -1,93 +1,58 @@
 module.exports = {
   siteMetadata: {
-    title: "Jumbo",
-    version: "0.4.4",
-    github: {
-      url: "https://github.com/adaltas/jumbo",
-      title: "Jumbo GitHub Repository"
-    },
-    issues: {
-      url: "https://github.com/adaltas/jumbo/issues",
-      title: "Report an issue"
-    },
-    footer: [
-      {
-        title: "Navigate",
-        links: [
-          {
-            label: "Overview",
-            url: "/overview/"
-          },
-          {
-            label: "Getting started",
-            url: "/getting-started/"
-          },
-          {
-            label: "Jumbo CLI",
-            url: "/commands/"
-          }
-        ]
-      },
-      {
-        title: "Contribute",
-        links: [
-          {
-            label: "GitHub",
-            url: "https://github.com/adaltas/jumbo"
-          },
-          {
-            label: "Issue Tracker",
-            url: "https://github.com/adaltas/jumbo/issues"
-          },
-          {
-            label: "License",
-            url: "https://github.com/adaltas/jumbo/blob/master/LICENSE"
-          }
-        ]
-      },
-      {
-        title: "About",
-        content:
-          'Jumbo is an open source product hosted on <a href="https://www.github.com">GitHub</a> and developed by <a href="http://www.adaltas.com">Adaltas</a>.'
-      }
-    ]
+    title: 'Jumbo',
+    github: 'http://github.com/adaltas/jumbo',
+    version: '0.4.4',
   },
   plugins: [
-    `gatsby-plugin-material-ui`,
-    `gatsby-plugin-react-next`,
-    `gatsby-plugin-react-helmet`,
+    'gatsby-plugin-sharp',
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-offline',
+    'gatsby-transformer-sharp',
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/src/md`,
-        name: "markdown-pages"
-      }
-      // },{
-      //   resolve: `gatsby-plugin-typography`,
-      //   options: {
-      //     pathToConfigModule: `src/utils/typography.js`,
-      //   },
-    },
-    {
-      resolve: `gatsby-transformer-remark`,
+      resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
+          'gatsby-remark-component',
           {
-            resolve: `gatsby-remark-prismjs`,
+            resolve: 'gatsby-remark-images',
             options: {
-              classPrefix: "language-",
-              inlineCodeMarker: null,
-              aliases: {}
-            }
-          }
-        ]
-      }
+              maxWidth: 600,
+            },
+          },
+          {
+            resolve: 'gatsby-remark-prismjs',
+            options: {
+              classPrefix: 'language-',
+            },
+          },
+        ],
+      },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        trackingId: "UA-1322093-5"
-      }
-    }
-  ]
-};
+        name: 'src',
+        path: `${__dirname}/src/`,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'jumbo',
+        short_name: 'starter',
+        start_url: '/',
+        background_color: '#663399',
+        theme_color: '#663399',
+        display: 'minimal-ui',
+        icon: 'src/images/jumbo-icon.png', // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-less',
+      options: {
+        javascriptEnabled: true,
+      },
+    },
+  ],
+}
