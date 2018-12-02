@@ -1,7 +1,7 @@
 import React from 'react'
 import { Icon } from 'antd'
 
-const JumboWhite = () => (
+const JumboWhiteSVG = () => (
   <svg
     width="1.6em"
     height="1.2em"
@@ -48,6 +48,6 @@ const JumboWhite = () => (
   </svg>
 )
 
-const JumboLogoWhite = props => <Icon component={JumboWhite} {...props} />
+const JumboLogoWhite = props => <Icon component={JumboWhiteSVG} {...props} />
 
 export default JumboLogoWhite

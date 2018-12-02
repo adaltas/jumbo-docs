@@ -36,6 +36,9 @@ const MainHeader = () => (
             <Menu.Item key="about" className={mainStyle.headerItem}>
               <Link to="/about/">About</Link>
             </Menu.Item>
+            <Menu.Item key="blog" className={mainStyle.headerItem}>
+              <Link to="/blog/">Blog</Link>
+            </Menu.Item>
             <Menu.Item key="github" className={mainStyle.headerItem}>
               <a
                 href={data.site.siteMetadata.github}
@@ -54,6 +57,9 @@ const MainHeader = () => (
               </Menu.Item>
               <Menu.Item key="mobile-about">
                 <Link to="/about/">About</Link>
+              </Menu.Item>
+              <Menu.Item key="mobile-blog">
+                <Link to="/blog/">Blog</Link>
               </Menu.Item>
               <Menu.Item key="mobile-github">
                 <a href={data.site.siteMetadata.github}>

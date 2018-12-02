@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { Menu } from 'antd'
 
-import DocsNavVersion from './docs-nav-version'
 import './theme.less'
 import docsStyles from './docs.module.css'
 

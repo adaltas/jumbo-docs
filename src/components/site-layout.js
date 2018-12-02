@@ -38,9 +38,7 @@ const SiteLayout = ({ children }) => (
           <Layout>
             <Content className={mainStyles.content}>{children}</Content>
           </Layout>
-          <Affix offsetBottom={0}>
-            <Footer>Footer</Footer>
-          </Affix>
+          <Footer>Footer</Footer>
         </Layout>
       </>
     )}
