@@ -50,7 +50,7 @@ tr:nth-child(even) {
 
 .docs-version {
   height: 64px;
-  color: #a8afff;
+  color: rgba(255, 255, 255, 0.65);
   background-color: #47499f;
   text-align: center;
   line-height: 64px;

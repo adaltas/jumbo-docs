@@ -2,14 +2,15 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
-import { Layout, Affix } from 'antd'
+import { Layout } from 'antd'
 
 import MainHeader from './main-header'
+import MainFooter from './main-footer'
 
 import './theme.less'
 import mainStyles from './main.module.css'
 
-const { Content, Footer } = Layout
+const { Content } = Layout
 
 const SiteLayout = ({ children }) => (
   <StaticQuery
@@ -36,10 +37,10 @@ const SiteLayout = ({ children }) => (
         <Layout className={mainStyles.layout}>
           <MainHeader />
           <Layout>
-            <Content className={mainStyles.content}>{children}</Content>
+            <Content>{children}</Content>
           </Layout>
-          <Footer>Footer</Footer>
         </Layout>
+        <MainFooter />
       </>
     )}
   />

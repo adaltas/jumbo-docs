@@ -1,15 +1,11 @@
-.layout {
-}
-
 .header {
-  font-size: 28px;
   text-align: center;
-  overflow: hidden;
 }
 
 .header-link {
+  font-size: 28px;
   font-weight: bold;
-  color: white;
+  color: white !important;
   margin-right: 10px;
 }
 .header-link:hover {
@@ -17,24 +13,17 @@
 }
 
 .header-logo {
-  margin-right: 5px;
+  font-size: 28px !important;
 }
 
 .header-menu {
-  display: inline-block;
   vertical-align: middle;
-  font-size: 18px;
+  font-size: 20px;
+  line-height: 64px;
 }
 
-.header-item-mobile {
-  display: none !important;
-}
-
-@media screen and (max-width: 600px) {
-  .header-item {
-    display: none !important;
-  }
-  .header-item-mobile {
-    display: block !important;
-  }
+.footer {
+  color: white;
+  background-color: #292d32;
+  text-align: center;
 }

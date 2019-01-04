@@ -25,21 +25,23 @@ const MainHeader = () => (
     render={data => (
       <Affix offsetTop={0}>
         <Header className={mainStyle.header}>
-          <Link to="/" className={mainStyle.headerLink}>
-            <JumboLogoWhite className={mainStyle.headerLogo} />
-            <span>{data.site.siteMetadata.title}</span>
-          </Link>
           <Menu mode="horizontal" theme="dark" className={mainStyle.headerMenu}>
-            <Menu.Item key="docs" className={mainStyle.headerItem}>
+            <Menu.Item key="home">
+              <Link to="/" className={mainStyle.headerLink}>
+                <JumboLogoWhite className={mainStyle.headerLogo} />
+                <span>{data.site.siteMetadata.title}</span>
+              </Link>
+            </Menu.Item>
+            <Menu.Item key="docs">
               <Link to="/docs/">Docs</Link>
             </Menu.Item>
-            <Menu.Item key="about" className={mainStyle.headerItem}>
+            <Menu.Item key="about">
               <Link to="/about/">About</Link>
             </Menu.Item>
-            <Menu.Item key="blog" className={mainStyle.headerItem}>
+            <Menu.Item key="blog">
               <Link to="/blog/">Blog</Link>
             </Menu.Item>
-            <Menu.Item key="github" className={mainStyle.headerItem}>
+            <Menu.Item key="github">
               <a
                 href={data.site.siteMetadata.github}
                 target="_blank"
@@ -48,25 +50,6 @@ const MainHeader = () => (
                 <Icon type="github" />
               </a>
             </Menu.Item>
-            <SubMenu
-              title={<span>...</span>}
-              className={mainStyle.headerItemMobile}
-            >
-              <Menu.Item key="mobile-docs">
-                <Link to="/docs/">Docs</Link>
-              </Menu.Item>
-              <Menu.Item key="mobile-about">
-                <Link to="/about/">About</Link>
-              </Menu.Item>
-              <Menu.Item key="mobile-blog">
-                <Link to="/blog/">Blog</Link>
-              </Menu.Item>
-              <Menu.Item key="mobile-github">
-                <a href={data.site.siteMetadata.github}>
-                  <Icon type="github" />
-                </a>
-              </Menu.Item>
-            </SubMenu>
           </Menu>
         </Header>
       </Affix>
