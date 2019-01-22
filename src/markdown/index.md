@@ -10,5 +10,3 @@ This is the documentation of Jumbo - a tool allowing to deploy local virtualized
 The versions of Jumbo and of the other project that it relies on (Vagrant, Ansible, etc.) are available [here](versions).
 
 ![Jumbo shell](./../images/jumbo-shell.png)
-![Jumbo shell](./../images/jumbo-shell.png)
-![Jumbo shell](./../images/jumbo-shell.png)

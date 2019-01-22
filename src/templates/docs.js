@@ -3,12 +3,13 @@ import { graphql } from 'gatsby'
 import { Layout } from 'antd'
 import rehypeReact from 'rehype-react'
 
-import DocsSider from '../components/docs-sider'
-import MainHeader from '../components/main-header'
-import DocsDrawer from '../components/docs-drawer'
-import HintBox from '../components/docs-hint-box'
+import DocsSider from '../components/docs/docs-sider'
+import MainHeader from '../components/header/main-header'
+import MainFooter from '../components/footer/main-footer'
+import DocsDrawer from '../components/docs/docs-drawer'
+import HintBox from '../components/docs/docs-hint-box'
 
-import docsStyles from '../components/docs.module.css'
+import docsStyles from '../components/docs/docs.module.css'
 
 require('prismjs/themes/prism-tomorrow.css')
 
@@ -33,6 +34,7 @@ const DocTemplate = ({ data }) => {
             {renderAst(currentDoc.htmlAst)}
           </div>
         </Content>
+        <MainFooter />
       </Layout>
     </Layout>
   )

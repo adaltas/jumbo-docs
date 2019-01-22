@@ -1,32 +1,45 @@
 import React from 'react'
 
-import SiteLayout from '../components/site-layout'
+import SiteLayout from '../components/layout/site-layout'
+import TextContainer from '../components/layout/text-container'
 
-const SecondPage = () => (
+import aboutStyles from './about.module.css'
+
+const SecondPage = ({ data }) => (
   <SiteLayout>
-    <h1>Richard Hamming on Luck</h1>
-    <div>
-      <p>
-        From Richard Hamming’s classic and must-read talk, “
-        <a href="http://www.cs.virginia.edu/~robins/YouAndYourResearch.html">
-          You and Your Research
-        </a>
-        ”.
-      </p>
-      <blockquote>
-        <p>
-          There is indeed an element of luck, and no, there isn’t. The prepared
-          mind sooner or later finds something important and does it. So yes, it
-          is luck.{' '}
-          <em>
-            The particular thing you do is luck, but that you do something is
-            not.
-          </em>
+    <TextContainer>
+      <div>
+        <h1 className={aboutStyles.aboutTitle}>About Jumbo</h1>
+        <p className={aboutStyles.aboutParagraph}>
+          Jumbo is an Open Source project hosted on{' '}
+          <a
+            href={data.site.siteMetadata.github}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>{' '}
+          that was developed at Adaltas by two interns who had to gain
+          experience with the Hadoop ecosystem.
         </p>
-      </blockquote>
-    </div>
-    <p>Posted April 09, 2011</p>
+        <p className={aboutStyles.aboutParagraph}>
+          It is a CLI tool written in Python. It offers an abstraction layer
+          that allows any user, experienced or not with Big Data technologies,
+          to describe a cluster that has to be provisioned. It then generates
+          scripts and leverages trusted DevOps tools to provision the cluster.
+        </p>
+      </div>
+    </TextContainer>
   </SiteLayout>
 )
 
+export const query = graphql`
+  query githubQuery {
+    site {
+      siteMetadata {
+        github
+      }
+    }
+  }
+`
 export default SecondPage

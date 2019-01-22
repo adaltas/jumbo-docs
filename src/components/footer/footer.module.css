@@ -1,0 +1,14 @@
+.footer {
+  color: white;
+  background-color: #292d32;
+  text-align: center;
+}
+.footer a {
+  color: white;
+}
+
+.adaltas-logo {
+  font-size: 12px;
+  margin-right: 5px;
+  vertical-align: middle;
+}

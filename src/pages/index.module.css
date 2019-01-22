@@ -2,7 +2,7 @@
   font-size: 1.2vw;
 }
 
-.logo-section {
+.center-section {
   text-align: center;
   margin-top: 20px;
 }
@@ -40,9 +40,9 @@
   margin-left: 10px;
   margin-right: 10px;
   margin-bottom: 20px;
-  border-width: 2px;
-  font-weight: bold;
-  border-color: #47499f;
+  border-width: 2px !important;
+  font-weight: bold !important;
+  border-color: #47499f !important;
 }
 
 .dark-section {
