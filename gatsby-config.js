@@ -39,11 +39,11 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'jumbo',
-        short_name: 'starter',
+        name: 'Jumbo',
+        short_name: 'Jumbo',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
+        background_color: '#565dbe',
+        theme_color: '#565dbe',
         display: 'minimal-ui',
         icon: 'src/images/jumbo-icon.png', // This path is relative to the root of the site.
       },
