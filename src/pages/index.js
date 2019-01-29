@@ -38,14 +38,25 @@ const IndexPage = ({ data }) => (
     </Row>
     <Row>
       <Col span={22} offset={1} className={indexStyles.centerSection}>
-        <Button type="default" size="large" className={indexStyles.mainButton}>
-          <Link to="/docs/getting-started">GET STARTED</Link>
-        </Button>
-        <Button type="default" size="large" className={indexStyles.mainButton}>
-          <Link to="/docs/versions">
-            NEW IN {data.site.siteMetadata.version}
-          </Link>
-        </Button>
+        <Link to="/docs/getting-started">
+          <Button
+            type="default"
+            size="large"
+            className={indexStyles.mainButton}
+          >
+            GET STARTED
+          </Button>
+        </Link>
+        <Link to="/docs/versions">
+          <Button
+            type="default"
+            size="large"
+            className={indexStyles.mainButton}
+          >
+            NEW IN&nbsp;
+            {data.site.siteMetadata.version}
+          </Button>
+        </Link>
       </Col>
     </Row>
     <div className={indexStyles.darkSection}>
