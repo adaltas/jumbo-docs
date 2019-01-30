@@ -11,10 +11,10 @@ sort: 6
   - Storage pool creation for libvirt at Jumbo installation ([issue #7](https://github.com/adaltas/jumbo/issues/7))
   - Minor fixes
 - **v0.4.3** - 29/09/2018: **Versions and repositories management**
-  - New file [`versions.json`](../../getting-started/advanced-usage) to manage software versions and repositories used for cluster provisioning
+  - New file [`versions.json`](/docs/advanced-usage) to manage software versions and repositories used for cluster provisioning
   - Remove command `setrepo` as it is handled by `versions.json`
 - **v0.4.2** - 12/07/2018: **Templates for clusters**
-  - New option for [`create`](../../commands/cluster) command: `--template`
+  - New option for [`create`](/docs/commands/cluster) command: `--template`
 - **v0.4.1** - 05/06/2018: **Vagrant commands integration and `-r` tag for `addservice`**
   - New commands: `start`, `stop`, `restart`, `status` to interact with the cluster directly within Jumbo
   - New tag `--recursive` for `addservice` to add a service and all its dependencies
@@ -38,7 +38,7 @@ sort: 6
 ## Underlying tools versions
 
 By default, Jumbo uses these versions for the tools that it coordinates.  
-Some versions can be easily changed as detailed in the [Advanced usage](../../getting-started/advanced-usage) section.
+Some versions can be easily changed as detailed in the [Advanced usage](/docs/advanced-usage) section.
 
 ### Vagrant
 

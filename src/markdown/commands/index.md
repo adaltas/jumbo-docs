@@ -7,10 +7,10 @@ sort: 3
 
 In this section you will find all the commands available in the Jumbo CLI to manipulate:
 
-- [clusters](cluster)
-- [nodes](node)
-- [services](service)
-- [components](component)
+- [clusters](/docs/commands/cluster)
+- [nodes](/docs/commands/node)
+- [services](/docs/commands/service)
+- [components](/docs/commands/component)
 
 There are two ways of using the CLI:
 

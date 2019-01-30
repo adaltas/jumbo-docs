@@ -48,7 +48,7 @@ jumbo (mycluster) > listnodes
 +----------+--------------------+-------------+----------+------+
 ```
 
-If this is your first time using Jumbo, we recommend following this tutorial to learn everything you need to know, but you can jump straight to [Cluster provisioning](../provisioning) from here.  
+If this is your first time using Jumbo, we recommend following this tutorial to learn everything you need to know, but you can jump straight to [Cluster provisioning](/docs/getting-started/provisioning) from here.  
 See the list of available templates on the Github repo ([templates/docs](https://github.com/adaltas/jumbo/tree/master/jumbo/core/config/templates/docs)).
 
 ## Virtual machine creation
@@ -121,7 +121,7 @@ When installing a service, all its components are auto-installed on the best fit
 
 Note that the service's clients will always be installed on all hosts (even with `--no-auto`) and on nodes created after the service installation. However you can use `rmcomponent` to delete them individually afterward.
 
-A list of all the services supported by Jumbo is available [here](../../about/supported).
+A list of all the services supported by Jumbo is available [here](/docs/supported).
 
 <hint-box
     type='info'

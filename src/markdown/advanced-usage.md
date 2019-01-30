@@ -7,7 +7,7 @@ sort: 4
 
 ## Versions and repositories URLs
 
-Since [v0.4.3](../../overview/versions), Jumbo supports fine grained versions and repositories management. All configurations are done through files called `versions.json`. When upgrading to v0.4.3, the default `verions.json` will be added to the `~/.jumbo` directory, and an empty `versions.json` file to any new cluster's root directory (e.g. `~/.jumbo/newcluster/versions.json`).
+Since [v0.4.3](/docs/versions), Jumbo supports fine grained versions and repositories management. All configurations are done through files called `versions.json`. When upgrading to v0.4.3, the default `verions.json` will be added to the `~/.jumbo` directory, and an empty `versions.json` file to any new cluster's root directory (e.g. `~/.jumbo/newcluster/versions.json`).
 
 ### How does it work?
 
