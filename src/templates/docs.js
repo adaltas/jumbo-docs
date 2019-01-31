@@ -16,7 +16,9 @@ require('prismjs/themes/prism-tomorrow.css')
 const { Content } = Layout
 const renderAst = new rehypeReact({
   createElement: React.createElement,
-  components: { 'hint-box': HintBox },
+  components: {
+    'hint-box': HintBox,
+  },
 }).Compiler
 
 const DocTemplate = ({ data }) => {
