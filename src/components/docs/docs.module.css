@@ -38,12 +38,10 @@ div > p {
 
 .sider {
   height: 100vh;
-  position: fixed !important;
   top: 0;
 }
 
 .docs-layout {
-  margin-left: 300px;
   min-height: 100vh;
 }
 
@@ -108,26 +106,13 @@ pre[class*='language-'] {
   font-weight: 200;
 }
 
-@media screen and (max-width: 600px) {
-  .sider {
-    display: none !important;
-  }
-  .docs-layout {
-    margin-left: 0px;
-  }
+@media screen and (max-width: 767px) {
   .markdown {
     max-width: 80%;
     margin: auto;
   }
-  .docs-version {
-    font-size: 16px;
-    line-height: 24px;
-  }
-}
-
-@media screen and (min-width: 601px) {
-  .drawer-div {
-    display: none !important;
+  .docs-layout {
+    min-width: 100vw;
   }
 }
 

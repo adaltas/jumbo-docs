@@ -10,7 +10,13 @@ import docsStyles from './docs.module.css'
 const { Sider } = Layout
 
 const DocsSider = ({ id, docs, version }) => (
-  <Sider className={docsStyles.sider} width={300}>
+  <Sider
+    className={docsStyles.sider}
+    width={300}
+    breakpoint={'md'}
+    collapsible={'true'}
+    collapsedWidth={0}
+  >
     <DocsNavVersion version={version} />
     <DocsNav id={id} docs={docs} />
   </Sider>

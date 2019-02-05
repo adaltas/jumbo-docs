@@ -9,6 +9,7 @@ import MainFooter from '../components/footer/main-footer'
 import DocsDrawer from '../components/docs/docs-drawer'
 import HintBox from '../components/docs/docs-hint-box'
 
+import '../components/theme.less'
 import docsStyles from '../components/docs/docs.module.css'
 
 require('prismjs/themes/prism-tomorrow.css')
@@ -26,9 +27,8 @@ const DocTemplate = ({ data }) => {
   const docs = data.allMarkdownRemark
   const docsVersion = data.site.siteMetadata.version
   return (
-    <Layout>
+    <Layout hasSider={true}>
       <DocsSider id={currentDoc.id} docs={docs} version={docsVersion} />
-      <DocsDrawer id={currentDoc.id} docs={docs} version={docsVersion} />
       <Layout className={docsStyles.docsLayout}>
         <MainHeader />
         <Content>
