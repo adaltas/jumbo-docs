@@ -108,6 +108,12 @@ pre[class*='language-'] {
   font-weight: 200;
 }
 
+@media screen and (min-width: 1201px) {
+  .docs-layout {
+    margin-left: 200px;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .markdown {
     max-width: 80%;
