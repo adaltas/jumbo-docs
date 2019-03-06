@@ -39,6 +39,8 @@ div > p {
 .sider {
   height: 100vh;
   top: 0;
+  z-index: 100;
+  position: fixed;
 }
 
 .docs-layout {
