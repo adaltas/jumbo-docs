@@ -13,7 +13,7 @@ const DocsSider = ({ id, docs, version }) => (
   <Sider
     className={docsStyles.sider}
     width={300}
-    breakpoint={'xl'}
+    breakpoint={'xxl'}
     collapsible={'true'}
     collapsedWidth={0}
   >
