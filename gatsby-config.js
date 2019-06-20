@@ -3,6 +3,7 @@ module.exports = {
     title: 'Jumbo',
     github: 'http://github.com/adaltas/jumbo',
     version: '0.4.4',
+    siteUrl: `http://jumbo.adaltas.com`,
   },
   plugins: [
     'gatsby-plugin-sharp',
@@ -54,5 +55,6 @@ module.exports = {
         javascriptEnabled: true,
       },
     },
+    `gatsby-plugin-sitemap`,
   ],
 }
