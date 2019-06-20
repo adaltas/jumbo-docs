@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: http://jumbo.adaltas.com/sitemap.xml
+Host: jumbo.adaltas.com

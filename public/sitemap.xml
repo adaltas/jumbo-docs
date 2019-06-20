@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 <url> <loc>http://jumbo.adaltas.com/docs/advanced-usage</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>http://jumbo.adaltas.com/docs</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>http://jumbo.adaltas.com/docs/supported</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>http://jumbo.adaltas.com/docs/commands/cluster</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>http://jumbo.adaltas.com/docs/commands/component</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://jumbo.adaltas.com/docs/commands</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jumbo.adaltas.com/docs/commands/cluster</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jumbo.adaltas.com/docs/supported</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jumbo.adaltas.com/docs</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://jumbo.adaltas.com/docs/versions</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jumbo.adaltas.com/docs/commands/component</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://jumbo.adaltas.com/docs/commands/node</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>http://jumbo.adaltas.com/docs/commands/service</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>http://jumbo.adaltas.com/docs/getting-started</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://jumbo.adaltas.com/docs/getting-started/configuration</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>http://jumbo.adaltas.com/docs/getting-started/key-principles</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://jumbo.adaltas.com/docs/getting-started/installation</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jumbo.adaltas.com/docs/commands/service</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://jumbo.adaltas.com/docs/getting-started/provisioning</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jumbo.adaltas.com/docs/getting-started/key-principles</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>http://jumbo.adaltas.com/docs/getting-started</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://jumbo.adaltas.com/about/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>http://jumbo.adaltas.com/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
